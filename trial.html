@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a free 30-minute trial session with James Kealey - Professional Tutor">
+    <title>Free 30-Minute Trial Session | James Kealey Tutoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script src="trial.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo">James Kealey Tutoring</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#popular">Popular Subjects</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="booking-container">
+        <div class="booking-header-navigation">
+            <div class="nav-controls">
+                <button id="backButton" class="nav-button secondary" onclick="goToPreviousStep(1)" style="display: none;">Previous Step</button>
+            </div>
+            <div class="booking-title">
+                <h1 id="stepTitle">Choose Your Level</h1>
+                <p id="stepDescription" class="step-description">Select the level of tutoring you need</p>
+            </div>
+            <div class="nav-controls">
+                <button class="nav-button" onclick="window.location.href='index.html'">Back to Home</button>
+            </div>
+        </div>
+
+        <div class="booking-progress-container">
+            <div class="progress-container">
+                <div class="progress-line">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-steps">
+                    <div class="progress-step" id="progress1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Level</div>
+                        <div class="step-selection" id="levelSelection"></div>
+                    </div>
+                    <div class="progress-step" id="progress2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Subject</div>
+                        <div class="step-selection" id="subjectSelection"></div>
+                    </div>
+                    <div class="progress-step" id="progress3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Session Type</div>
+                        <div class="step-selection" id="sessionTypeSelection"></div>
+                    </div>
+                    <div class="progress-step" id="progress4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Time</div>
+                        <div class="step-selection" id="timeSelection"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-form">
+            <div id="step1" class="booking-screen active">
+                <div class="option-buttons">
+                    <button class="option-button" data-value="gcse" onclick="selectLevel('gcse')">
+                        <span class="option-title">GCSE</span>
+                        <span class="option-description">For students aged 14-16</span>
+                    </button>
+                    <button class="option-button" data-value="alevel" onclick="selectLevel('alevel')">
+                        <span class="option-title">A-Level</span>
+                        <span class="option-description">For students aged 16-18</span>
+                    </button>
+                    <button class="option-button" data-value="uni" onclick="selectLevel('uni')">
+                        <span class="option-title">University</span>
+                        <span class="option-description">For undergraduate students</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="step2" class="booking-screen">
+                <div class="option-buttons" id="subjectButtons">
+                    <!-- Subject buttons will be added dynamically -->
+                </div>
+            </div>
+
+            <div id="step3" class="booking-screen">
+                <div class="option-buttons" id="sessionTypeButtons">
+                    <!-- Session type buttons will be added dynamically -->
+                </div>
+            </div>
+
+            <div id="step4" class="booking-screen">
+                <label>Select a date and time for your free 30-minute trial session:</label>
+                <div id="calendly-embed" class="calendly-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 James Kealey Tutoring. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
