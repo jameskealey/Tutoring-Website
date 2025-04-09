@@ -379,7 +379,7 @@ function showSessionTypes() {
     goToStep(3);
 }
 
-const TUTOR_ADDRESS = '15 Moneyneany Lane, Draperstown, Magherafelt, BT45 7ER';
+const TUTOR_ADDRESS = 'BT457ER';
 let travelFee = 0;
 
 function selectSessionType(type) {
